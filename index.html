@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-align: center;
+                background-image: url(weather.jpg);
+                background-size: cover;
+            }
+            .header{
+                margin-top: 0.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* background-color: whitesmoke; */
+                padding: 0rem 3rem;
+            }
+            .title{
+                font-size: 2rem;
+            }
+            input{
+                width: 20rem;
+                padding: 0.3rem;
+                padding-left: 0.7rem;
+                border: solid 1.5px rgb(59, 58, 58);
+                border-radius: 2rem;
+                margin-right: 1rem;
+            }
+            input:focus{
+                outline: none;
+            }
+            .search-area{
+                display: flex;
+                align-items: center;
+            }
+            .card{
+                width: 20rem;
+                height: 19rem;
+                border: solid 2px lightgray;
+                border-radius: 13px;
+            }
+            .card-heading{
+                background-color: rgb(24,117,254);
+                color: white;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                padding: 1rem;
+            }
+            .card-container{
+                display: flex;
+                width: 100%;
+                margin-top: 5rem;
+                gap: 5rem;
+                justify-content: center;
+            }
+            .heading{
+                margin:3.5rem;
+                font-size: 4rem;
+            }
+            .card-content div{
+                font-size: 1.4rem;
+                padding: 0.2rem;
+            }
+            .card-content h1{
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            Weather App
+        </div>
+        <div class="search-area">
+            <input type="search" placeholder="Search for your location">
+            <button class="btn btn-outline btn-dark" type="submit">Search</button>
+        </div>
+    </div>
+    <h1 class="heading">Weather for <span>location</span></h1>
+
+    <div class="card-container">
+        <div class="card">
+            <h2 class="card-heading">Temperatures</h2>
+            <div class="card-content">
+                <h1 class="temp">26 C</h1>
+                <div class="temp-info">Temperature is 26</div>
+                <div class="feels-like">Feels like</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="card-heading">Humidity Info</h2>
+            <div class="card-content">
+                <h1 class="humidity">49%</h1>
+                <div class="humidity-info">Humidity is 49%</div>
+                <div class="cloud">Cloud cover is </div>
+                <div class="text"></div>
+                <!-- <div></div> -->
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="card-heading">Wind Info</h2>
+            <div class="card-content">
+                <h1 class="speed">2.57 km/hr</h1>
+                <div class="speed-info">Wind speed is 2.57</div>
+                <div class="dirn">Wind direction is</div>
+                <div class="degree">Wind degree is </div>
+                <!-- <div></div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+        
+</body>
+
+</html>
